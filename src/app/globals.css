@@ -2,26 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+
+@layer components {
+
+    .btn {
+        @apply py-5 px-10 font-bold rounded-md text-dark flex items-center gap-x-2 
+    }
+    .btnDark{
+        @apply bg-dark text-white  hover:bg-black
+    }
+    
+}
+.hero-swiper{
+      max-width: 400px;
+}
+.hero-swiper .swiper-pagination{
+    left: 0 !important;
+    
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.hero-swiper .swiper-pagination .swiper-pagination-bullet-active{
+    background: #B5957C;
+    height: 20px;
+    border-radius: 4px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.productsTable tbody tr td{
+    padding-top: 8px !important;
+    padding-bottom:8px  !important;
+}
+
+
+.productsTable tbody tr:nth-child(even) {
+    background-color: #FDFCFB;
+
 }
