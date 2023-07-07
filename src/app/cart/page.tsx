@@ -14,9 +14,9 @@ function page({ }: Props) {
             <div className=' hidden  sm:block'>
                 <ProductsTable />
             </div>
-            <div className='py-10 min-h-screen flex  flex-col'>
+            <div className='py-10 sm:hidden min-h-screen flex  flex-col'>
 
-                <Container className='  sm:hidden '>
+                <Container className='   '>
                     <div className=' flex-1 pb-5'>
                         {Array(6).fill(0).map((_, idx) => <div key={idx} className='border-b text-sm'>
                             <div className=' flex items-center py-2.5 w-full'>
