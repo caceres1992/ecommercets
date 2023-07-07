@@ -37,9 +37,9 @@ const Products = ({ children, title, isNewArrived = false, bgSection = 'light' }
                 >
                     {Array(4).fill(0).map((_, idx) =>
                         <SwiperSlide
-
+                        key={idx}
                         >
-                            <ProductCard key={idx} isNewArrived={isNewArrived} />
+                            <ProductCard  isNewArrived={isNewArrived} />
                         </SwiperSlide>
                     )}
                 </Swiper>
